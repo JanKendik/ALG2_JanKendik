@@ -1,4 +1,5 @@
-package pkg05_shapes;
+package inteface_variant;
+
 
 import java.util.ArrayList;
 
@@ -31,15 +32,15 @@ public class Main {
         }
         System.out.println(allArea2);
 
-        System.out.println("3. varianta");//dynamicke pole objektů typu shape 
-        ArrayList<Shape> shapes3 = new ArrayList<>();
+        System.out.println("3. varianta");//dynamicke pole objektů pro cokoli kompatibilni s shapeinterface 
+        ArrayList<ShapeInterface> shapes3 = new ArrayList<>();
         shapes3.add(c1);
         shapes3.add(c2);
         shapes3.add(r1);
 //muze obsahovat cokoli co je typově kompatibilni s "Shape"
-        //Shape s = new Rectangle(6, 5);
+        //ShapeInterface s = new Rectangle(6, 5);
         double allArea3 = 0;
-        for (Shape shape : shapes3) {
+        for (ShapeInterface shape : shapes3) {
             allArea3 += shape.computeArea();//polymorfismus
         }
         System.out.println(allArea3);

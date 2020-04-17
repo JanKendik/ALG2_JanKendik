@@ -1,7 +1,9 @@
 
-package pkg05_shapes;
+package inteface_variant;
 
-public class Rectangle extends Shape{
+
+
+public class Rectangle implements ShapeInterface{
     private double a;
     private double b;
     private double area; //vypocitana
@@ -26,8 +28,10 @@ public class Rectangle extends Shape{
 
     @Override
     public String toString() {
-        return super.toString() + String.format(" a = %.2f, b = %.2f", this.a, this.b);
+        return "Rectangle{" + "a=" + a + ", b=" + b + '}';
     }
+
+    
     
     private double area(){
     return a*b;

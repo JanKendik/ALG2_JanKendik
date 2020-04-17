@@ -1,7 +1,9 @@
 
-package pkg05_shapes;
+package inteface_variant;
 
-public class Circle extends Shape {
+
+
+public class Circle implements ShapeInterface {
 //data
     private double r;
 
@@ -24,8 +26,10 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return super.toString() + String.format(" r = %.2f", this.r);
+        return "Circle{" + "r=" + r + '}';
     }
+
+    
     
     public double computeArea(){
     return Math.PI * r * r;
@@ -36,8 +40,7 @@ public class Circle extends Shape {
         Circle c2 = Circle.getInstanceD(10);
         System.out.println(c1.toString());
         System.out.println(c1.computeArea());
-        System.out.println(c1.name);
-        System.out.println(c1.getShapeName());
+        
         
     }
     
